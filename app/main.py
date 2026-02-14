@@ -17,7 +17,7 @@ def format_single_linter_file(file_path: str, errors: list) -> dict:
                 "column": e["column_number"],
                 "message": e["text"],
                 "name": e["code"],
-                "source": "flake8",
+                "source": e["flake8"],
             }
             for e in errors
         ],
